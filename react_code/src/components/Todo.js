@@ -3,15 +3,12 @@ import Backdrop from './Backdrop';
 import Modal from './Modal';
 
 function Todo(props) {
-  const [showModal, setShowModal] = useState();
+  const [showModal, setShowModal] = useState(false);
 
   function showModalHandler() {
-    setShowModal(true);
+    setShowModal(!showModal);
   }
 
-  function closeModalHandler() {
-    setShowModal(false);
-  }
 
   return (
     <div className='card'>
@@ -21,8 +18,8 @@ function Todo(props) {
           Delete
         </button>
       </div>
-      {showModal && <Backdrop onClick={closeModalHandler} />}
-      {showModal && <Modal text='Are you sure?' onClose={closeModalHandler} />}
+      {showModal && <Backdrop onClick={showModalHandler} />}
+      {showModal && <Modal text='Are you sure?' onClose={showModalHandler} />}
     </div>
   );
 }
