@@ -4,4 +4,4 @@ const ChangeArraytoObject = number.map((num)=>{
 });
 
 
-console.log(doubleNumArray);
+console.log(ChangeArraytoObject);
