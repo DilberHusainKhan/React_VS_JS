@@ -3,5 +3,5 @@ const ChangeArraytoObject = number.map((num)=>{
     return {'val':num};
 });
 
-// noting 
+// noting to update
 console.log(ChangeArraytoObject);
